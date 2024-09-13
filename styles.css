@@ -1,0 +1,648 @@
+@import url(./reset.css);
+
+:root{
+    --LightredCTAtext: hsl(356, 100%, 66%);
+    --VerylightredCTAhoverbackground: hsl(355, 100%, 74%);
+    --Verydarkblueheadings: hsl(208, 49%, 24%);
+
+    --Whitetext: hsl(0, 0%, 100%);
+    --Grayishbluefootertext: hsl(240, 2%, 79%);
+    --Verydarkgrayishbluebodycopy: hsl(207, 13%, 34%);
+    --Verydarkblackbluefooterbackground: hsl(240, 10%, 16%);
+
+    --Verylightred: hsl(13, 100%, 72%);
+    --Lightred: hsl(353, 100%, 62%);
+
+    --Verydarkgrayblue: hsl(237, 17%, 21%);
+    --Verydarkdesaturatedblue: hsl(237, 23%, 32%);
+
+}
+
+body, html{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+header, footer{
+    width: 100%;
+    font-family: 'Ubuntu';
+    padding: 4vw 11vw;
+}
+.close, .menu{
+    display: none;
+}
+h3{
+    font-size: clamp(1.2rem, 2.3vw, 2.5rem);
+    font-weight: 600;
+}
+h2, h3{
+    color: var(--Verydarkblueheadings);
+}
+header{
+    background: url(./images/bg-pattern-intro-desktop.svg), linear-gradient(135deg, var(--Verylightred) 20%, var(--Lightred), var(--Verylightred) 80%);
+    background-repeat: no-repeat;
+    background-size: 235%;
+    background-position: 26% 52%;
+    height: 40vw;
+    border-radius: 0 0 0 10vw;
+    h1{
+        font-size: clamp(2.5rem, 5vw, 4.5rem);
+        font-weight: 400;
+        color: white;
+    }
+    img{
+        margin: 0 3.5vw 0 0;
+    }
+}
+.mid{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5vw 0;
+    gap: 1vw;
+    p{
+        font-size: clamp(1.1rem, 1.5vw, 1.4rem);
+        font-weight: 300;
+        color: var(--Grayishbluefootertext);
+        margin: 0 0 2vw;
+    }
+    button{
+        padding: 0.8vw 1vw;
+        border-radius: 10vw;
+        border: none;
+        font-weight: 500;
+        font-size: clamp(1rem, 1.3vw, 1.2rem);
+        cursor: pointer;
+    }
+}
+.para{
+    font-size: clamp(0.85rem, 1.35vw, 1.3rem);
+    margin: 1.7vw 0 4vw;
+    font-weight: 300 !important;
+}
+.butts{
+    display: flex;
+    gap: 1vw;
+}
+.start{
+    color: var(--LightredCTAtext);
+}
+.sidebar{
+    width: 100%;
+}
+.learn{
+    background-color: transparent;
+    color: white;
+    border: 2px solid white !important;
+}
+.start:hover{
+    color: white;
+    background-color: var(--VerylightredCTAhoverbackground);
+}
+.learn:hover{
+    background-color: white;
+    color: var(--LightredCTAtext);
+}
+.topmost{
+    display: flex;
+    align-items: center;
+}
+.mobile{
+    display: none;
+}
+.top{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: clamp(0.85rem, 1.35vw, 1.3rem);
+    font-weight: 400;
+}
+.topleft{
+    display: flex;
+    gap: 2.5vw;
+}
+.menuheader{
+    display: flex;
+    align-items: center;
+    position: relative;
+    gap: 0.7vw;
+    img{
+        margin: 0;
+        transform: rotate(0deg);
+        transition: transform 0.5s ease-in;
+    }
+}
+.opset{
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+input{
+    display: none;
+}
+label{
+    color: white;
+    filter: brightness(90%);
+}
+label:hover{
+    text-decoration: underline;
+    cursor: pointer;
+    filter: brightness(100%);
+}
+input[type="checkbox"]:checked + .opset #arrow{
+    transform: rotate(180deg);
+}
+input[type="checkbox"]:checked ~ div{
+    opacity: 1;
+}
+.product, .company, .connect{
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    top: 120%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 2vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    box-shadow: 0 4px 10px gray;
+    
+}
+.product p:hover, .company p:hover, .connect p:hover{
+    font-weight: 500;
+    cursor: pointer;
+}
+.product{
+    left: -85%;
+}
+.company{
+    left: -25%;
+}
+.connect{
+    left: -30%;
+}
+.topright{
+    display: flex;
+    gap: 2vw;
+    align-items: center;
+    p{
+        color: white;
+        filter: brightness(90%);
+    }
+}
+.topright p:hover{
+    text-decoration: underline;
+    filter: brightness(100%);
+    cursor: pointer;
+}
+.sign{
+    color: var(--LightredCTAtext) !important;
+    background-color: white;
+    padding: 1vw 2vw;
+    border-radius: 5vw;
+    font-weight: 600;
+}
+.sign:hover{
+    color: white !important;
+    text-decoration: none !important;
+    background-color: var(--VerylightredCTAhoverbackground);
+}
+main{
+    overflow: hidden;
+    width: 100%;
+    font-family: 'Overpass';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.firsth{
+    padding: 10vw 0 0;
+    font-size: clamp(1.4rem, 2.8vw, 3rem);
+}
+.first{
+    position: relative;
+    display: flex;
+    width: 100%;
+    padding: 4vw 0;
+    height: 53vw;
+}
+.firstleft{
+    padding: 1vw 43vw 0 11vw;
+}
+.desk{
+    position: absolute;
+    left: 56%;
+    top: -9.5vw;
+    width: clamp(30rem, 60vw, 60rem);
+}
+.second{
+    background: linear-gradient(90deg, var(--Verydarkgrayblue), var(--Verydarkdesaturatedblue) 10%);
+    border-radius: 0 7vw 0 7vw;
+}
+.second1{
+    display: flex;
+    align-items: center;
+    height: 27vw;
+    background: url(./images/bg-pattern-circles.svg), linear-gradient(90deg, var(--Verydarkgrayblue), var(--Verydarkdesaturatedblue));
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: -45% 85%;
+    padding: 0 5vw 0 8vw;
+    border-radius: 0 0 0 7vw;
+}
+.right{
+    color: white;
+    padding: 2vw 3vw 0 4vw;
+    h2{
+        font-size: clamp(1.4rem, 2.8vw, 3rem);
+        font-weight: 400;
+        color: white;
+    }
+}
+.phone{
+    width: 37vw;
+    transform: translateY(2%);
+}
+.third{
+    position: relative;
+    display: flex;
+    height: 65vw;
+}
+.laptop{
+    position: absolute;
+    top: 5vw;
+    left: -20.2vw;
+    width: clamp(32rem, 70vw, 80rem);
+}
+.thirdright{
+    padding: 18vw 3vw 6vw 48vw;
+}
+footer{
+    height: 24vw;
+    background-color: var(--Verydarkblackbluefooterbackground);
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    padding: 4vw 28vw 4vw 11vw;
+    border-radius: 0 7vw 0 0;
+    color: var(--Grayishbluefootertext);
+    font-size: clamp(0.85rem, 1.35vw, 1.3rem);
+}
+.footerhead{
+    color: white;
+    font-weight: 500;
+    margin: 0 0 1vw;
+}
+footer p:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+.attribution{
+    position: absolute;
+    top: 98.9%;
+}
+
+@media screen and (max-width: 600px) {
+    header, footer{
+        width: 100%;
+        padding: 12vw 5vw;
+    }
+    h3{
+        font-size: clamp(2.2rem, 6.5vw, 3.2rem);
+        line-height: 8vw;
+    }
+    header{
+        background: url(./images/bg-pattern-intro-mobile.svg), linear-gradient(135deg, var(--Verylightred) 20%, var(--Lightred), var(--Verylightred) 80%);
+        background-size: 300%;
+        background-position: 33% 35%;
+        height: 130vw;
+        border-radius: 0 0 0 20vw;
+        width: 100%;
+        h1{
+            text-align: center;
+            font-size: clamp(2.8rem, 8vw, 4rem);
+            line-height: 12vw;
+            margin: 0 0 3vw;
+        }
+        img{
+            margin: 0 3.5vw 0 0;
+        }
+    }
+    .menu{
+        display: block;
+        margin: 0;
+    }
+    .close{
+        margin: 0;
+    }
+    .menu:hover, .close:hover{
+        cursor: pointer;
+    }
+    .mid{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20vw 3.2vw 0;
+        gap: 1vw;
+        text-align: center;
+        width: 100%;
+        p{
+            font-size: clamp(1.2rem, 1.7vw, 1.6rem);
+            margin: 0 0 7vw;
+        }
+        button{
+            width: 100%;
+            border-radius: 10vw;
+            font-size: clamp(1.2rem, 1.7vw, 1.6rem);
+            cursor: pointer;
+        }
+    }
+    .para{
+        font-size: clamp(1.3rem, 2.4vw, 1.8rem);
+        margin: 4vw 0 10vw;
+        font-weight: 300 !important;
+    }
+    .butts{
+        display: flex;
+        width: 100%;
+        height: 11vw;
+        gap: 4vw;
+    }
+    .topmost{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .mobile{
+        display: block;
+    }
+    .desktop{
+        display: none;
+    }
+    .topleft{
+        display: flex;
+        gap: 2.5vw;
+        overflow-y: scroll;
+    }
+    .menuheader{
+        display: flex;
+        align-items: center;
+        position: relative;
+        gap: 0.7vw;
+        flex-direction: column;
+        width: 100%;
+        img{
+            margin: 0;
+            transform: rotate(0deg);
+            transition: transform 0.5s ease-in;
+        }
+    }
+    label{
+        color: var(--Verydarkblueheadings);
+        filter: brightness(90%);
+    }
+    label:hover{
+        text-decoration: underline;
+        cursor: pointer;
+        filter: brightness(100%);
+    }
+    input[type="checkbox"]:checked + .opset label{
+        color: rgb(108, 108, 108);
+    }
+    input[type="checkbox"]:checked ~ div{
+        height: auto;
+        margin: 2vw 0 6vw;
+        padding: 3vw 0;
+        transform: translateY(0%);
+    }
+    .product, .company, .connect{
+        position: relative;
+        opacity: 1;
+        height: 0;
+        transform: translateY(-10%);
+        overflow: hidden;
+        transition: all 0.5s ease-in-out;
+        top: 0;
+        border-radius: 1vw;
+        padding: 0vw;
+        width: 100%;
+        align-items: center;
+        font-size: clamp(1.2rem, 2.2vw, 1.6rem);
+        gap: 2vw;
+        box-shadow: none;
+        color: rgb(108, 108, 108);
+        background-color: rgb(244, 244, 244);
+    }
+    .opset{
+        margin: 0 0 2vw;
+    }
+    .topleft::-webkit-scrollbar {
+        width: 10px;
+    }
+      
+    .topleft::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 2px rgb(214, 210, 210); 
+        border-radius: 10px;
+    }
+       
+    .topleft::-webkit-scrollbar-thumb {
+        background: lightgray; 
+        border-radius: 10px;
+    }
+      
+    .topleft::-webkit-scrollbar-thumb:hover {
+        background: gray; 
+    }
+    .sidebar{
+        position: absolute;
+        left: 5%;
+        top: 2.5%;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+        background-color: white;
+        height: 11.5%;
+        width: 90%;
+        box-shadow: 0 4px 10px gray;
+        border-radius: 2vw;
+        padding: 8vw;
+    }
+    .clicked{
+        opacity: 1;
+    }
+    .top{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        font-size: clamp(1.3rem, 2.4vw, 1.8rem);
+        font-weight: 450;
+        /* display: none; */
+    }
+    .topleft{
+        align-items: center;
+        width: 100%;
+        flex-direction: column;
+        gap: 4vw;
+    }
+    .product p:hover, .company p:hover, .connect p:hover{
+        cursor: pointer;
+        color: black;
+    }
+    .product{
+        left: 0;
+    }
+    .company{
+        left: 0;
+    }
+    .connect{
+        left: 0
+    }
+    .topright{
+        display: flex;
+        flex-direction: column;
+        gap: 4vw;
+        align-items: center;
+        border-top: 2px solid lightgray;
+        width: 100%;
+        padding: 5vw 0 0;
+        p{
+            color: black;
+        }
+    }
+    .sign{
+        background: linear-gradient(90deg, var(--Verylightred), var(--Lightred));
+        padding: 2vw 7vw;
+        border-radius: 7vw;
+        font-weight: 500;
+        color: white !important;
+        filter: brightness(100%) !important;
+        border: 3px solid transparent;
+    }
+    .sign:hover{
+        text-decoration: none !important;
+        color: var(--LightredCTAtext) !important;
+        background: white !important;
+        border: 3px solid var(--Grayishbluefootertext);
+    }
+    main{
+        overflow: hidden;
+        width: 100%;
+        font-family: 'Overpass';
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        padding: 5vw 0 0;
+    }
+    .firsth{
+        margin: 12vw 0 10vw;
+        font-size: clamp(2.4rem, 7.5vw, 3.6rem);
+    }
+    .firstr{
+        width: 105vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .first{
+        text-align: center;
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: 220vw;
+    }
+    .firstleft{
+        padding: 6vw 8.2vw 0;
+    }
+    .desk{
+        position: relative;
+        left: 0;
+        top: 0;
+        width: 100%
+    }
+    .second{
+        height: 130vw;
+        background: linear-gradient(90deg, var(--Verydarkgrayblue), var(--Verydarkdesaturatedblue) 10%);
+        border-radius: 0 20vw 0 20vw;
+    }
+    .second1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        height: 100%;
+        background: url(./images/bg-pattern-circles.svg), linear-gradient(var(--Verydarkgrayblue), var(--Verydarkdesaturatedblue));
+        background-size: 160%;
+        background-repeat: no-repeat;
+        background-position: center 250%;
+        padding: 0 8.2vw;
+        border-radius: 0 20vw 0 20vw;
+    }
+    .right{
+        color: white;
+        padding: 52vw 3vw 0 4vw;
+        text-align: center;
+        h2{
+            font-size: clamp(2.2rem, 7vw, 3.4rem);
+            line-height: 9vw;
+            font-weight: 400;
+        }
+    }
+    .phone{
+        position: absolute;
+        width: 100%;
+        transform: translateY(-47%);
+    }
+    .third{
+        flex-direction: column;
+        align-items: center;
+        height: 230vw;
+        width: 100%;
+        padding: 4vw 0;
+        text-align: center;
+    }
+    .lapimg{
+        display: flex;
+        flex-direction: column;
+        width: 130vw;
+    }
+    .laptop{
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+    .thirdright{
+        padding: 5vw 8.2vw 0;
+    }
+    footer{
+        height: 150vw;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12vw 0 5vw;
+        border-radius: 0 7vw 0 0;
+        color: var(--Grayishbluefootertext);
+        font-size: clamp(1.3rem, 2.4vw, 1.8rem);
+    }
+    .footerhead{
+        color: white;
+        font-weight: 500;
+        margin: 0 0 1vw;
+    }
+    .attribution{
+        top: 99.6%;
+    }
+}

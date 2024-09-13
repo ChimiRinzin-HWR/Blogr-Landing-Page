@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | [Blogr]</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+        color: yellow;
+      }
+      .attribution a {
+        color: orange;
+      }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="topmost">
+        <img src="./images/logo.svg" alt="Logo of Blogr" />
+        <div class="sidebar">
+          <div class="top">
+            <div class="topleft">
+              <div class="menuheader prod">
+                <input type="checkbox" id="product" class="prodr" />
+                <section class="opset">
+                  <label for="product">Product</label>
+                  <img
+                    class="mobile"
+                    id="arrow"
+                    src="./images/icon-arrow-dark.svg"
+                    alt="arrow"
+                  />
+                  <img
+                    class="desktop"
+                    id="arrow"
+                    src="./images/icon-arrow-light.svg"
+                    alt="arrow"
+                  />
+                </section>
+                <div class="product">
+                  <p>Overview</p>
+                  <p>Pricing</p>
+                  <p>Marketplace</p>
+                  <p>Features</p>
+                  <p>Integrations</p>
+                </div>
+              </div>
+              <div class="menuheader comp">
+                <input type="checkbox" id="company" class="compr" />
+                <section class="opset">
+                  <label for="company">Company</label>
+                  <img
+                    class="mobile"
+                    id="arrow"
+                    src="./images/icon-arrow-dark.svg"
+                    alt="arrow"
+                  />
+                  <img
+                    class="desktop"
+                    id="arrow"
+                    src="./images/icon-arrow-light.svg"
+                    alt="arrow"
+                  />
+                </section>
+
+                <div class="company">
+                  <p>About</p>
+                  <p>Team</p>
+                  <p>Blog</p>
+                  <p>Careers</p>
+                </div>
+              </div>
+
+              <div class="menuheader conn">
+                <input type="checkbox" id="connect" class="connr" />
+                <section class="opset">
+                  <label for="connect">Connect</label>
+                  <img
+                    class="mobile"
+                    id="arrow"
+                    src="./images/icon-arrow-dark.svg"
+                    alt="arrow"
+                  />
+                  <img
+                    class="desktop"
+                    id="arrow"
+                    src="./images/icon-arrow-light.svg"
+                    alt="arrow"
+                  />
+                </section>
+
+                <div class="connect">
+                  <p>Contact</p>
+                  <p>Newsletter</p>
+                  <p>LinkedIn</p>
+                </div>
+              </div>
+            </div>
+            <div class="topright">
+              <p>Login</p>
+              <p class="sign">Sign Up</p>
+            </div>
+          </div>
+        </div>
+        <img class="menu" src="./images/icon-hamburger.svg" alt="hamburger" />
+        <img class="close" src="./images/icon-close.svg" alt="close" />
+      </div>
+      <div class="mid">
+        <h1>A modern publishing platform</h1>
+        <p>Grow your audience and build your online brand</p>
+        <div class="butts">
+          <button class="start">Start for Free</button>
+          <button class="learn">Learn More</button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="firstr">
+        <h2 class="firsth">Designed for the future</h2>
+        <img
+          class="mobile desk"
+          src="./images/illustration-editor-mobile.svg"
+          alt="Illustration for Desktop"
+        />
+      </div>
+      <div class="first">
+        <div class="firstleft">
+          <h3>Introducing an extensible editor</h3>
+          <p class="para">
+            Blogr features an exceedingly intuitive interface which lets you
+            focus on one thing: creating content. The editor supports management
+            of multiple blogs and allows easy manipulation of embeds such as
+            images, videos, and Markdown. Extensibility with plugins and themes
+            provide easy ways to add functionality or change the looks of a
+            blog.
+          </p>
+          <h3>Robust content management</h3>
+          <p class="para">
+            Flexible content management enables users to easily move through
+            posts. Increase the usability of your blog by adding customized
+            categories, sections, format, or flow. With this functionality,
+            you’re in full control.
+          </p>
+        </div>
+        <img
+          class="desktop desk"
+          src="./images/illustration-editor-desktop.svg"
+          alt="Illustration for Desktop"
+        />
+      </div>
+      <div class="second">
+        <div class="second1">
+          <img
+            class="phone"
+            src="./images/illustration-phones.svg"
+            alt="Illustration Phones"
+          />
+          <div class="right">
+            <h2>State of the Art Infrastructure</h2>
+            <p class="para">
+              With reliability and speed in mind, worldwide data centers provide
+              the backbone for ultra-fast connectivity. This ensures your site
+              will load instantly, no matter where your readers are, keeping
+              your site competitive.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="third">
+        <div class="lapimg">
+          <img
+            class="desktop laptop"
+            src="./images/illustration-laptop-desktop.svg"
+            alt="Laptop Illustration"
+          />
+          <img
+            class="mobile laptop"
+            src="./images/illustration-laptop-mobile.svg"
+            alt="Laptop Illustration"
+          />
+        </div>
+        <div class="thirdright">
+          <h3>Free, open, simple</h3>
+          <p class="para">
+            Blogr is a free and open source application backed by a large
+            community of helpful developers. It supports features such as code
+            syntax highlighting, RSS feeds, social media integration,
+            third-party commenting tools, and works seamlessly with Google
+            Analytics. The architecture is clean and is relatively easy to
+            learn.
+          </p>
+          <h3>Powerful tooling</h3>
+          <p class="para">
+            Batteries included. We built a simple and straightforward CLI tool
+            that makes customization and deployment a breeze, but capable of
+            producing even the most complicated sites.
+          </p>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <img src="./images/logo.svg" alt="Blogr Logo" />
+      <div class="product1">
+        <p class="footerhead">Product</p>
+        <p>Overview</p>
+        <p>Pricing</p>
+        <p>Marketplace</p>
+        <p>Features</p>
+        <p>Integrations</p>
+      </div>
+      <div class="company1">
+        <p class="footerhead">Company</p>
+        <p>About</p>
+        <p>Team</p>
+        <p>Blog</p>
+        <p>Careers</p>
+      </div>
+      <div class="connect2">
+        <p class="footerhead">Connect</p>
+        <p>Contact</p>
+        <p>Newsletter</p>
+        <p>LinkedIn</p>
+      </div>
+    </footer>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://www.linkedin.com/in/chimi-rinzin-20178a291/"
+        >Chimi Rinzin</a
+      >.
+    </div>
+  </body>
+  <script src="./script.js"></script>
+</html>
