@@ -365,7 +365,7 @@ footer p:hover{
         }
     }
     .para{
-        font-size: clamp(1.3rem, 2.4vw, 1.8rem);
+        font-size: clamp(1.15rem, 2.2vw, 1.8rem);
         margin: 4vw 0 10vw;
         font-weight: 300 !important;
     }
@@ -571,7 +571,7 @@ footer p:hover{
         width: 100%
     }
     .second{
-        height: 140vw;
+        height: 145vw;
         background: linear-gradient(90deg, var(--Verydarkgrayblue), var(--Verydarkdesaturatedblue) 10%);
         border-radius: 0 20vw 0 20vw;
     }
@@ -606,7 +606,7 @@ footer p:hover{
     .third{
         flex-direction: column;
         align-items: center;
-        height: 250vw;
+        height: 255vw;
         width: 100%;
         padding: 4vw 0;
         text-align: center;
@@ -614,7 +614,7 @@ footer p:hover{
     .lapimg{
         display: flex;
         flex-direction: column;
-        width: 130vw;
+        width: 135vw;
     }
     .laptop{
         position: relative;
@@ -626,7 +626,7 @@ footer p:hover{
         padding: 5vw 8.2vw 0;
     }
     footer{
-        height: 160vw;
+        height: 165vw;
         display: flex;
         flex-direction: column;
         width: 100%;
